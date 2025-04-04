@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Profile Page</title>
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header with navigation -->
+        <header>
+            <div class="logo">
+                <img src="tulip.jpg" alt="Pop Logo">
+            </div>
+            <div class="nav-right">
+                <i class="fas fa-search" id="search-icon"></i>
+                <i class="fas fa-bell" id="notification-icon"></i>
+                <i class="fas fa-bars" id="menu-icon"></i>
+            </div>
+        </header>
+
+        <!-- Cover Image -->
+        <div class="cover-image">
+            <button class="post-button">
+                <i class="fas fa-plus"></i> POST A QUESTION/POLL
+            </button>
+            <button class="camera-button">
+                <i class="fas fa-camera"></i>
+            </button>
+        </div>
+
+        <!-- Profile Section -->
+        <div class="profile-section">
+            <div class="profile-sidebar">
+                <div class="profile-image-container">
+                    <img src="tulip.jpg" alt="Profile Picture" class="profile-image">
+                    <button class="camera-button-small">
+                        <i class="fas fa-camera"></i>
+                    </button>
+                </div>
+                <h2>Shrisha Devadiga</h2>
+                <p class="location"><i class="fas fa-map-marker-alt"></i> Bengaluru</p>
+                
+                <div class="score-section">
+                    <h3>SCORE</h3>
+                    <div class="score">242</div>
+                    <span class="score-change">+15 this week</span>
+                </div>
+
+                <div class="badges-section">
+                    <h3>BADGES</h3>
+                    <div class="badges-grid">
+                        <!-- Badges will be dynamically added here -->
+                    </div>
+                    <a href="#" class="see-all">See all badges</a>
+                </div>
+
+                <button class="view-profile-button">View profile as ></button>
+            </div>
+
+            <!-- Main Content Section -->
+            <div class="main-content">
+                <div class="tabs">
+                    <button class="tab active" data-tab="your-posts">Your posts</button>
+                    <button class="tab" data-tab="liked-posts">Liked posts</button>
+                    <button class="tab" data-tab="saved-posts">Saved posts</button>
+                </div>
+
+                <div class="filter-section">
+                    <span>Show</span>
+                    <select id="post-filter">
+                        <option value="all-posts">All Posts</option>
+                        <option value="questions">Questions</option>
+                        <option value="polls">Polls</option>
+                        <option value="beauty">Beauty</option>
+                        <option value="work">Work</option>
+                        <option value="relationships">Relationships</option>
+                    </select>
+                </div>
+
+                <div class="posts-container">
+                    <!-- Posts will be dynamically added here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Templates -->
+    <template id="post-template">
+        <div class="post">
+            <div class="post-header">
+                <div class="post-author">
+                    <div class="author-avatar">
+                        <img src="" alt="">
+                    </div>
+                    <div class="author-info">
+                        <h4></h4>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="post-category">
+                    <span class="category-tag"></span>
+                    <div class="post-actions-dropdown">
+                        <button class="more-options">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <button class="save-post">
+                                <i class="far fa-bookmark"></i>
+                                Save Post
+                            </button>
+                            <button class="report-post">
+                                <i class="fas fa-flag"></i>
+                                Report
+                            </button>
+                            <button class="delete-post">
+                                <i class="fas fa-trash"></i>
+                                Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="post-content">
+                <p></p>
+                <div class="top-answer">
+                    <span class="top-answer-label">Top Answer</span>
+                    <p></p>
+                </div>
+            </div>
+            <div class="post-footer">
+                <div class="answers-count">
+                    <i class="fas fa-comment"></i>
+                    <span></span>
+                </div>
+                <div class="post-actions">
+                    <button class="like-button">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <button class="share-button">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <script src="profile.js"></script>
+</body>
+</html>
